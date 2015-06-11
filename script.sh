@@ -1,12 +1,10 @@
   # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 
 
-#install firefox 
+
+#install flux box, firefox 
 sudo apt-get update
-sudo apt-get install firefox -y
-#install flux box
-sudo apt-get update
-sudo apt-get -y install fluxbox rungetty xorg unzip vim
+sudo apt-get -y install fluxbox rungetty xorg unzip vim firefox
 
 #=========================================================
 echo "Set autologin for the Vagrant user..."
@@ -71,4 +69,6 @@ EOF
 )
 echo "${STARTUP_SCRIPT}" > /etc/X11/Xsession.d/9999-common_start
 chmod +x /etc/X11/Xsession.d/9999-common_start
-echo "ok"
+
+sudo reboot
+
