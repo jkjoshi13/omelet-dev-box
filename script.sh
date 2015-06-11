@@ -19,7 +19,7 @@ PROFILE_STRING=$(cat <<EOF
 if [ ! -e "/tmp/.X0-lock" ] ; then
 	    startx
     fi
-    EOF
+EOF
     )
 echo "${PROFILE_STRING}" >> .profile
 echo "ok"
@@ -59,16 +59,19 @@ fi
 mvn archetype:generate -DgroupId=com.sample -DartifactId=my-app -DarchetypeArtifactId=omelet-archetype -DarchetypeGroupId=com.springer -Dversion=1.0.1 -Dpackage=sample-test -DinteractiveMode=false
 cd my-app
 mvn clean dependency:copy-dependencies
-
+#=========================================================
 echo -n "Install startup scripts..."
 #=========================================================
 STARTUP_SCRIPT=$(cat <<EOF
 #!/bin/sh
+~/tmux.sh &
 xterm &
 EOF
 )
+
 echo "${STARTUP_SCRIPT}" > /etc/X11/Xsession.d/9999-common_start
 chmod +x /etc/X11/Xsession.d/9999-common_start
+echo "ok"
 
 sudo reboot
 
