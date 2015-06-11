@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get install firefox -y
 #install flux box
 sudo apt-get update
-sudo apt-get -y install fluxbox rungetty
+sudo apt-get -y install fluxbox rungetty xorg unzip vim
 
 #=========================================================
 echo "Set autologin for the Vagrant user..."
@@ -23,8 +23,8 @@ if [ ! -e "/tmp/.X0-lock" ] ; then
     fi
     EOF
     )
-    echo "${PROFILE_STRING}" >> .profile
-    echo "ok"
+echo "${PROFILE_STRING}" >> .profile
+echo "ok"
 
 
 
