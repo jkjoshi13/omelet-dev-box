@@ -19,8 +19,8 @@ Sit back and relax or grab a cup of coffee may be lunch , it will take some time
 
 
 ####Provisioning would be:  
-1. Java oracle - 7  
-2. Maven 3  
+1.Java oracle-7  
+2.Maven-3  
 3.eclipse luna -> /opt/eclipse    
 4.selenium-server -> /opt/selenium/  
 5.Firefox  
