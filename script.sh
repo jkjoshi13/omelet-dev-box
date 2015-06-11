@@ -66,12 +66,14 @@ STARTUP_SCRIPT=$(cat <<EOF
 #!/bin/sh
 ~/tmux.sh &
 xterm &
+
 EOF
 )
 
 echo "${STARTUP_SCRIPT}" > /etc/X11/Xsession.d/9999-common_start
 chmod +x /etc/X11/Xsession.d/9999-common_start
 echo "ok"
-
+MESSAGE="echo -e 'Welcome to omelet dev Box everything is setup for you:'\n1'.Firefox'\n'2.Chrome'\n'3.eclipse in /opt/eclipse'\n'4.maven'\n'5.Selenium-server in /opt/selenium"
+echo $MESSAGE >> ~/.bashrc
 sudo reboot
 
