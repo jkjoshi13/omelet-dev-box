@@ -25,3 +25,4 @@ Sit back and relax or grab a cup of coffee may be lunch , it will take some time
 4.selenium-server -> /opt/selenium/  
 5.Firefox  
 6.Chrome  
+7.Sample project for omelet with name my-app
